@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/Dark_Slate_Blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".DisplayContactItemActivity">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/Light_Beige"
+        android:elevation="20dp"
+        android:layout_margin="20dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/display_contact_image"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/lionel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/display_email_address"
+                style="@style/Display_contact_item_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@id/display_phone_number"
+                android:drawableStart="@drawable/large_emai_icon"
+                android:text="fouadkhkkh"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_contact_image" />
+
+            <TextView
+                android:id="@+id/display_phone_number"
+                style="@style/Display_contact_item_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/large_phone_call"
+                android:text="052567afafagag637"
+                app:layout_constraintBottom_toTopOf="@id/display_delete_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_email_address"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/display_delete_button"
+                style="@style/delete_button_style"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Delete"
+                app:icon="@drawable/delete_icon"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display_phone_number" />
+            <TextView
+                android:id="@+id/display_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goat"
+                app:layout_constraintBottom_toBottomOf="@id/display_contact_image"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/contact_name_shape"
+                android:textColor="@color/Dark_Slate_Blue"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

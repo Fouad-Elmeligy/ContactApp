@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="190dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:paddingVertical="20dp"
+    android:backgroundTint="@color/Light_Beige"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="20dp"
+
+   >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/contact_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/lionel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/email_address"
+            style="@style/email_phoneNumber_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/phone_number"
+            android:drawableStart="@drawable/email"
+            android:text="fouadkhkkh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_image" />
+
+        <TextView
+            android:id="@+id/phone_number"
+            style="@style/email_phoneNumber_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/phone_call"
+            android:text="052567afafagag637"
+            app:layout_constraintBottom_toTopOf="@id/delete_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_address"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete_button"
+            style="@style/delete_button_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Delete"
+            app:icon="@drawable/delete_icon"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_number" />
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goat"
+            app:layout_constraintBottom_toBottomOf="@id/contact_image"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/contact_name_shape"
+            android:textColor="@color/Dark_Slate_Blue"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

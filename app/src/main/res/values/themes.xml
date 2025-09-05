@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.ContactApp" parent="Theme.Material3.DayNight.NoActionBar" />
+    <style name="email_phoneNumber_style">
+        <item name="color">@color/Dark_Slate_Blue</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppinsmedium</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+
+    </style>
+    <style name="delete_button_style">
+        <item name="backgroundTint">@color/Tomato_Red</item>
+        <item name="android:background">@drawable/delete_button_shape</item>
+    </style>
+    <style name="Display_contact_item_style">
+        <item name="color">@color/Dark_Slate_Blue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppinsmedium</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+</resources>
