@@ -6,10 +6,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Dark_Slate_Blue"
-    android:paddingHorizontal="10dp"
-
     tools:context=".HomeActivity"
     >
+
+    <ImageView
+        android:id="@+id/no_contact_added"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/no_contact_added"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintVertical_bias="0.3"
+        />
+    <TextView
+        android:id="@+id/text_no_contact_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_contact_added"
+        android:text="There is No Contacts Added Here"
+        android:textColor="@color/Light_Beige"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppinsmedium"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contact_recycler_view"
@@ -18,8 +41,22 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         android:orientation="vertical"
-        tools:listitem="@layout/contact_item"
         app:layout_constraintHorizontal_chainStyle="spread"
         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_new_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Light_Beige"
+app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_add"
+
+
+       />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
